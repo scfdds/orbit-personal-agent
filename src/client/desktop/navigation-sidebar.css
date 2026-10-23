@@ -1,0 +1,89 @@
+/* Recent work is a stable navigation aid, not another progress dashboard. */
+.dt-root.dt-shell .dt-sidebar.dt-sidebar-navigation {
+  width:228px; min-width:228px; padding:15px 12px 12px; min-height:0;
+}
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-header { display:flex; align-items:center; flex:none; gap:4px; min-height:40px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-assistant { min-width:0; min-height:40px; justify-content:flex-start; flex:1; gap:8px; padding:4px 8px 4px 5px; border-radius:8px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-home-active { box-shadow:none; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-assistant-copy { display:flex; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-assistant-copy>strong { font-size:14px; font-weight:600; letter-spacing:-.25px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-header button:focus-visible { outline:2px solid var(--dt-secondary); outline-offset:-2px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-mainnav { display:flex; flex:1; flex-direction:column; min-height:0; gap:3px; margin:20px 0 0; padding:0; border:0; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recents { display:flex; flex-direction:column; min-height:0; flex:0 1 auto; margin-bottom:7px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recents-heading { flex:none; color:var(--dt-muted); font-size:10px; padding:0 10px 8px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-list { min-height:0; overflow:auto; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:color-mix(in srgb,var(--dt-muted) 24%,transparent) transparent; padding:1px 0; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent { display:flex; align-items:center; justify-content:flex-start; width:100%; min-width:0; min-height:37px; margin:1px 0; gap:8px; padding:9px 10px; border-radius:8px; text-align:left; color:var(--dt-secondary); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent:hover { color:var(--dt-ink); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-active { background:color-mix(in srgb,var(--dt-hover) 87%,var(--dt-surface)); color:var(--dt-ink); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-title { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; line-height:1.55; font-weight:450; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-active .dt-sidebar-recent-title { font-weight:570; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-state { display:flex; flex:none; align-items:center; white-space:nowrap; font-size:9px; color:var(--dt-muted); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-state-running { color:#729585; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-state-running>svg { animation:dt-recent-working 1.3s linear infinite; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-state-needs_input { color:#a58a63; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-unread { width:5px; height:5px; flex:none; border-radius:50%; background:#7896b4; margin:0 3px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recents-empty { padding:7px 10px 12px; font-size:10px; line-height:1.8; color:var(--dt-muted); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-mainnav>.dt-sidebar-nav { min-height:37px; padding:9px 10px; gap:9px; flex:none; font-size:11px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-nav>span { display:inline; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-all { color:var(--dt-muted); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-footer { margin-top:auto; padding-top:12px; flex:none; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-footer>.dt-sidebar-nav { justify-content:flex-start; padding:9px 10px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent:focus-visible { outline-offset:-2px; }
+
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed { width:64px; min-width:64px; padding:15px 7px 12px; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-nav>span { display:none; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-assistant { width:100%; flex:none; justify-content:center; min-height:40px; padding:4px 0; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-mainnav { margin-top:17px; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-nav { justify-content:center; padding:10px 5px; min-height:40px; }
+
+@keyframes dt-recent-working { to { transform:rotate(360deg); } }
+@media(prefers-reduced-motion:reduce) {
+  .dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-recent-state-running>svg { animation:none; }
+}
+@media(max-width:760px) {
+  .dt-root.dt-shell .dt-sidebar.dt-sidebar-navigation { width:228px!important; min-width:228px!important; }
+  .dt-root.dt-shell .dt-sidebar.dt-sidebar-navigation.dt-sidebar-collapsed { width:64px!important; min-width:64px!important; }
+}
+
+/* A matter reveals its discussions only while it is the current destination. */
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-matter-group { margin:1px 0; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-matter-row { display:flex; align-items:center; min-width:0; border-radius:8px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-matter-row:hover { background:color-mix(in srgb,var(--dt-hover) 48%,transparent); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-matter-row-active { background:color-mix(in srgb,var(--dt-hover) 72%,var(--dt-surface)); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-matter-row>.dt-sidebar-recent { flex:1; width:0; margin:0; gap:5px; background:transparent; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-example { flex:none; color:var(--dt-muted); font-size:8px; border:1px solid color-mix(in srgb,var(--dt-line) 85%,transparent); border-radius:3px; padding:0 3px; line-height:1.45; font-weight:400; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle { width:24px; height:29px; padding:0; margin-right:3px; flex:none; display:grid; place-items:center; border-radius:6px; color:var(--dt-muted); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle:hover { background:color-mix(in srgb,var(--dt-hover) 95%,var(--dt-surface)); color:var(--dt-ink); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle>svg { transition:transform 130ms ease; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle[aria-expanded=true]>svg { transform:rotate(90deg); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussions { margin:3px 0 8px 13px; padding-left:8px; border-left:1px solid var(--dt-line); display:flex; flex-direction:column; gap:2px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion { display:flex; align-items:center; width:100%; min-width:0; min-height:31px; padding:7px 8px; gap:5px; text-align:left; border-radius:6px; color:var(--dt-secondary); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-title { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; line-height:1.6; font-weight:430; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion:hover { color:var(--dt-ink); background:color-mix(in srgb,var(--dt-hover) 55%,transparent); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-active { background:var(--dt-hover); color:var(--dt-ink); }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-active .dt-sidebar-discussion-title { font-weight:540; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion:focus-visible,.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle:focus-visible { outline-offset:-2px; }
+@media(prefers-reduced-motion:reduce) {
+  .dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-discussion-toggle>svg { transition:none; }
+}
+
+/* Search remains available above the scrolling recent-matter list. */
+.dt-root.dt-shell .dt-sidebar-navigation>.dt-sidebar-search { display:flex; align-items:center; justify-content:flex-start; width:100%; min-height:34px; flex:none; gap:9px; margin-top:12px; padding:8px 10px; border-radius:8px; color:var(--dt-muted); font-size:11px; background:color-mix(in srgb,var(--dt-hover) 48%,transparent); }
+.dt-root.dt-shell .dt-sidebar-navigation>.dt-sidebar-search:hover { color:var(--dt-ink); background:var(--dt-hover); }
+.dt-root.dt-shell .dt-sidebar-navigation>.dt-sidebar-search>svg { flex:none; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed>.dt-sidebar-search { justify-content:center; width:100%; min-height:40px; margin-top:8px; padding:10px 5px; background:transparent; }
+
+/* Keep the data switch alongside settings, visible without opening a dialog. */
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-utilities { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+.dt-root.dt-shell .dt-sidebar-navigation .dt-sidebar-utilities>.dt-sidebar-nav { width:auto; flex:none; gap:7px; }
+.dt-sidebar-demo { display:flex; align-items:center; gap:8px; padding-right:6px; color:var(--dt-secondary); white-space:nowrap; font-size:11px; }
+.dt-root .dt-sidebar-demo-switch { display:block; width:30px; height:18px; padding:2px; border:0; border-radius:12px; background:#d7d9dc; flex:none; }
+.dt-root .dt-sidebar-demo-switch:hover { background:#c8ccd1; }
+.dt-root .dt-sidebar-demo-switch[aria-checked=true] { background:var(--dt-ink); }
+.dt-sidebar-demo-switch>span { display:block; width:14px; height:14px; border-radius:50%; background:var(--dt-surface); box-shadow:0 1px 3px #0002; transition:transform 140ms ease; }
+.dt-sidebar-demo-switch[aria-checked=true]>span { transform:translateX(12px); }
+.dt-root .dt-sidebar-demo-compact { width:100%; min-height:40px; padding:10px 5px; border-radius:7px; color:var(--dt-muted); }
+.dt-root .dt-sidebar-demo-compact[aria-checked=true] { color:var(--dt-ink); background:var(--dt-hover); box-shadow:inset 0 0 0 1px var(--dt-line); }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-utilities { flex-direction:column-reverse; gap:3px; }
+.dt-root.dt-shell .dt-sidebar-navigation.dt-sidebar-collapsed .dt-sidebar-utilities>.dt-sidebar-nav { width:100%; }
+@media(prefers-reduced-motion:reduce) { .dt-sidebar-demo-switch>span { transition:none; } }

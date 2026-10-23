@@ -1,0 +1,18 @@
+/* Opening a matter leaves a concise overview beside the ongoing conversation. */
+.dt-work-strip-items>button>span { min-width:0; overflow:hidden; text-overflow:ellipsis; }
+.dt-work-strip-items>button>svg { flex:none; }
+.dt-home-overview .dt-work-strip.dt-work-strip-compact { gap:10px; padding-bottom:13px; }
+.dt-work-strip-compact .dt-work-strip-items { min-width:0; }
+.dt-root .dt-work-strip-compact .dt-work-strip-items>button { max-width:100%; padding:3px 0; background:transparent; color:var(--dt-muted); gap:5px; }
+.dt-root .dt-work-strip-compact .dt-work-strip-items>button:hover { color:var(--dt-ink); }
+.dt-work-strip-empty { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:10px; color:var(--dt-muted); }
+.dt-home-overview .dt-work-overview.dt-work-overview-compact { padding-bottom:13px; }
+.dt-work-overview-compact .dt-work-heading { margin-bottom:8px; }
+.dt-work-overview-compact .dt-work-heading small { display:none; }
+.dt-home-overview .dt-work-overview-compact .dt-work-cards { grid-template-columns:1fr; gap:5px; margin-top:0; max-height:231px; overflow-y:auto; scrollbar-width:thin; }
+.dt-root .dt-work-overview-compact .dt-work-card { display:grid; grid-template-columns:minmax(0,1fr) auto; min-height:0; gap:3px 8px; padding:9px 11px; border-radius:8px; box-shadow:none; }
+.dt-work-overview-compact .dt-work-card>strong { grid-column:1; grid-row:1; -webkit-line-clamp:1; font-size:11px; }
+.dt-work-overview-compact .dt-work-card-top { grid-column:2; grid-row:1; }
+.dt-work-overview-compact .dt-work-card-top>svg { display:none; }
+.dt-work-overview-compact .dt-work-card-summary { grid-column:1/-1; -webkit-line-clamp:1; font-size:10px; }
+.dt-work-overview-compact .dt-work-card-bottom { display:none; }

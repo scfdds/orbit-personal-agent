@@ -1,0 +1,64 @@
+/* One active discussion, with an optional reference surface beside it. */
+.dt-focus-shell .dt-discussion-stage { display:flex; flex-direction:column; flex:1; min-width:0; min-height:0; position:relative; overflow:hidden; }
+.dt-focus-shell .dt-anchor-main[hidden] { display:none!important; }
+.dt-focus-shell .dt-anchor-main { flex:1; min-width:0; }
+.dt-focus-shell .dt-focused-matter { position:relative; inset:auto; flex:1; width:100%; min-width:0; min-height:0; border:0; box-shadow:none; z-index:auto; animation:dt-discussion-in .15s ease-out; }
+.dt-focus-shell .dt-reference-pane { position:relative; inset:auto; flex:1; width:0; min-width:0; max-width:none; min-height:0; z-index:10; overflow:hidden; }
+.dt-focus-shell.dt-resource-open .dt-discussion-stage { flex:1.08; }
+.dt-focus-shell .dt-pane-error { position:relative; inset:auto; width:auto; flex:1; }
+.dt-focus-shell .dt-home-overview { padding:0; max-height:none; overflow:visible; }
+.dt-focus-shell .dt-home-overview .dt-work-overview { padding-bottom:22px; }
+.dt-focus-heading { flex:none; padding:23px 32px 17px; border-bottom:1px solid var(--dt-line); }
+.dt-focus-heading>nav { display:flex; align-items:center; gap:10px; min-width:0; font-size:14px; line-height:1.6; }
+.dt-root .dt-focus-heading>nav>button { display:flex; align-items:center; gap:6px; flex:none; padding:5px 7px; margin-left:-7px; font-size:11px; color:var(--dt-muted); }
+.dt-focus-heading>nav>svg { flex:none; color:var(--dt-muted); }
+.dt-focus-heading>nav>span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-weight:570; letter-spacing:-.2px; }
+.dt-focus-meta { display:flex; align-items:center; gap:7px; min-height:16px; margin-top:7px; font-size:10px; color:var(--dt-muted); }
+.dt-focus-meta>.dt-example-tag { font-size:8px; font-style:normal; }
+.dt-focus-meta>small { display:flex; align-items:center; gap:5px; font-size:10px; color:#769889; }
+.dt-focus-meta>small>i { width:4px; height:4px; background:currentColor; border-radius:50%; }
+.dt-focus-resources { display:flex; align-items:center; gap:7px; flex:none; padding:11px 32px; overflow:auto; scrollbar-width:thin; border-bottom:1px solid var(--dt-line); }
+.dt-root .dt-focus-resources>button { display:flex; align-items:center; gap:6px; flex:none; min-width:0; max-width:230px; padding:6px 9px; border:1px solid var(--dt-line); border-radius:7px; color:var(--dt-secondary); font-size:10px; }
+.dt-focus-resources>button>span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dt-focus-resources>button>svg { flex:none; color:var(--dt-muted); }
+.dt-root .dt-focus-resources>button[aria-pressed=true] { background:var(--dt-hover); color:var(--dt-ink); }
+.dt-focus-shell .dt-matter-transcript { max-width:966px; padding:29px 38px 15px; }
+.dt-focus-shell .dt-focused-matter .dt-prose { font-size:13px; line-height:1.95; }
+.dt-focus-shell .dt-focused-matter .dt-message { margin-bottom:28px; }
+.dt-focus-shell .dt-matter-composer-dock { padding:10px 38px 17px; background:linear-gradient(to bottom,transparent,var(--dt-bg) 18px); }
+.dt-focus-composer-inner { width:100%; max-width:890px; margin:0 auto; }
+.dt-focus-shell .dt-matter-composer-dock .dt-composer { max-width:none; padding:16px 17px 12px; border-radius:15px; }
+.dt-focus-shell .dt-matter-composer-dock .dt-composer textarea { font-size:13px; }
+.dt-focus-shell .dt-matter-composer-dock .dt-composer-context { font-size:10px; }
+.dt-focus-shell.dt-resource-open .dt-content,.dt-focus-shell.dt-resource-open .dt-matter-transcript { padding-left:25px; padding-right:25px; }
+.dt-focus-shell.dt-resource-open .dt-compose-dock,.dt-focus-shell.dt-resource-open .dt-matter-composer-dock { padding-left:24px; padding-right:24px; }
+.dt-focus-shell.dt-resource-open .dt-focus-heading { padding-left:25px; padding-right:25px; }
+.dt-focus-shell.dt-resource-open .dt-focus-resources { padding-left:25px; padding-right:25px; }
+.dt-focus-shell .dt-reference-pane .dt-pane-header { min-width:0; }
+.dt-focus-shell .dt-reference-pane .dt-pane-header strong { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+@keyframes dt-discussion-in { from { opacity:.6; } to { opacity:1; } }
+@media(max-width:1000px) {
+ .dt-focus-shell .dt-focus-heading { padding:18px 23px 14px; }
+ .dt-focus-shell .dt-focus-resources { padding:10px 23px; }
+ .dt-focus-shell.dt-resource-open .dt-content,.dt-focus-shell.dt-resource-open .dt-matter-transcript { padding-left:18px; padding-right:18px; }
+ .dt-focus-shell.dt-resource-open .dt-compose-dock,.dt-focus-shell.dt-resource-open .dt-matter-composer-dock { padding-left:15px; padding-right:15px; }
+ .dt-focus-shell.dt-resource-open .dt-main-visible-context>span:last-child { display:none; }
+ .dt-focus-shell.dt-resource-open .dt-composer-hint { font-size:9px; }
+ .dt-focus-shell.dt-resource-open .dt-composer-context { max-width:150px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+ .dt-focus-shell .dt-matter-transcript { padding-left:26px; padding-right:26px; }
+ .dt-focus-shell .dt-matter-composer-dock { padding-left:26px; padding-right:26px; }
+}
+@media(max-width:760px) {
+ .dt-focus-shell .dt-sidebar-navigation:not(.dt-sidebar-collapsed) { position:absolute; inset:0 auto 0 0; z-index:40; background:var(--dt-surface); box-shadow:8px 0 25px #00000012; }
+ .dt-focus-shell .dt-sidebar-navigation:not(.dt-sidebar-collapsed)+.dt-discussion-stage { margin-left:64px; }
+ .dt-focus-shell .dt-reference-pane { position:absolute; inset:0 0 0 64px; width:auto; max-width:none; z-index:30; box-shadow:-8px 0 25px #00000012; }
+ .dt-focus-shell .dt-focus-heading { padding:15px 17px 12px; }
+ .dt-focus-heading>nav { gap:5px; font-size:12px; }
+ .dt-root .dt-focus-heading>nav>button { font-size:10px; gap:3px; }
+ .dt-focus-shell .dt-focus-resources { padding:10px 17px; }
+ .dt-focus-shell .dt-matter-transcript { padding:22px 17px 10px; }
+ .dt-focus-shell .dt-matter-composer-dock { padding:8px 13px 11px; }
+ .dt-focus-shell .dt-home-overview { padding:0; }
+ .dt-focus-shell .dt-matter-composer-dock .dt-composer { padding:12px 12px 9px; }
+}
+@media(prefers-reduced-motion:reduce) { .dt-focus-shell .dt-focused-matter,.dt-focus-shell .dt-reference-pane { animation:none; } }

@@ -1,0 +1,44 @@
+.dt-organizer-settings { color: var(--dt-ink); font-size: 12px; }
+.dt-organizer-enable { display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+.dt-organizer-enable h3 { margin: 0; font-size: 13px; font-weight: 600; }
+.dt-organizer-settings .dt-organizer-enable p { margin: 7px 0 0; color: var(--dt-secondary); font-size: 11px; line-height: 1.7; }
+.dt-dialog .dt-organizer-switch { display: block; flex: 0 0 34px; width: 34px; height: 21px; padding: 3px; border: 0; border-radius: 20px; background: #c8cbd0; transition: background 160ms ease; }
+.dt-organizer-switch span { display: block; width: 15px; height: 15px; background: white; border-radius: 50%; box-shadow: 0 1px 3px #0002; transition: transform 160ms ease; }
+.dt-dialog .dt-organizer-switch[aria-checked=true] { background: #373b42; }
+.dt-organizer-switch[aria-checked=true] span { transform: translateX(13px); }
+.dt-organizer-settings button:focus-visible, .dt-organizer-settings select:focus-visible, .dt-organizer-group>summary:focus-visible { outline: 2px solid #6e7581; outline-offset: 3px; }
+.dt-organizer-settings button:disabled, .dt-organizer-settings select:disabled { opacity: .5; cursor: default; }
+.dt-organizer-options { margin-top: 24px; }
+.dt-organizer-field { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 36px; }
+.dt-organizer-field>label { font-size: 12px; }
+.dt-organizer-field select { width: 160px; max-width: 55%; padding: 8px 10px; border: 1px solid var(--dt-line); border-radius: 7px; background: var(--dt-bg); color: var(--dt-ink); font-size: 12px; }
+.dt-organizer-settings .dt-organizer-help { color: var(--dt-secondary); font-size: 11px; line-height: 1.7; margin: 6px 0 16px; }
+.dt-organizer-run { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 20px; }
+.dt-organizer-run>p { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; color: var(--dt-secondary); font-size: 10px; line-height: 1.6; margin: 0; }
+.dt-organizer-status-divider { padding: 0 2px; color: var(--dt-muted); }
+.dt-organizer-run>button { flex-shrink: 0; }
+.dt-organizer-records { margin-top: 22px; border-top: 1px solid var(--dt-line); }
+.dt-organizer-group { border-bottom: 1px solid var(--dt-line); }
+.dt-organizer-group>summary { cursor: pointer; display: flex; align-items: center; gap: 7px; padding: 14px 0; list-style: none; font-size: 12px; font-weight: 500; }
+.dt-organizer-group>summary::-webkit-details-marker { display: none; }
+.dt-organizer-group>summary svg { color: var(--dt-secondary); transition: transform 160ms ease; }
+.dt-organizer-group[open]>summary svg { transform: rotate(90deg); }
+.dt-organizer-group>summary span { color: var(--dt-muted); font-weight: 400; font-size: 11px; margin-left: auto; }
+.dt-organizer-group>ul { list-style: none; padding: 0 0 2px 20px; margin: 0; }
+.dt-organizer-action { padding: 10px 0 14px; }
+.dt-organizer-action + .dt-organizer-action { border-top: 1px solid var(--dt-line); padding-top: 15px; }
+.dt-organizer-action-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.dt-organizer-action-heading strong { font-size: 12px; font-weight: 550; overflow-wrap: anywhere; }
+.dt-organizer-action-heading>span { color: var(--dt-muted); font-size: 10px; white-space: nowrap; }
+.dt-organizer-settings .dt-organizer-action-description { font-size: 11px; color: var(--dt-ink); margin: 6px 0 0; line-height: 1.7; overflow-wrap: anywhere; }
+.dt-organizer-settings .dt-organizer-action-reason { color: var(--dt-secondary); font-size: 11px; margin: 4px 0 0; line-height: 1.7; overflow-wrap: anywhere; }
+.dt-organizer-action-buttons { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin-top: 10px; color: var(--dt-secondary); }
+.dt-organizer-action-buttons .dt-text-button { font-size: 11px; }
+.dt-organizer-settings .dt-organizer-empty { color: var(--dt-muted); padding: 0 0 15px 20px; margin: 0; font-size: 11px; }
+.dt-organizer-settings>.dt-settings-error { flex-wrap: wrap; align-items: baseline; line-height: 1.7; }
+@media (prefers-color-scheme: dark) {
+  .dt-dialog .dt-organizer-switch { background: #4e535c; }
+  .dt-dialog .dt-organizer-switch[aria-checked=true] { background: #d6d9de; }
+  .dt-organizer-switch[aria-checked=true] span { background: #292b2e; }
+}
+@media (prefers-reduced-motion: reduce) { .dt-organizer-switch, .dt-organizer-switch span, .dt-organizer-group>summary svg { transition: none; } }

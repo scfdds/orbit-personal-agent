@@ -1,0 +1,32 @@
+.dt-shell.dt-has-pane .dt-main{flex:0 0 38%;min-width:320px;}
+.dt-shell.dt-has-pane .dt-reference-pane{flex:1;width:auto;min-width:0;max-width:none;}
+.dt-has-pane .dt-main .dt-content,.dt-has-pane .dt-compose-inner{max-width:600px;}
+.dt-has-pane .dt-main .dt-content{padding-top:28px;}
+.dt-has-pane .dt-composer-context{max-width:50%;}
+.dt-delivery-heading{margin:3px 0 23px;}.dt-delivery-heading .dt-eyebrow{font-size:10px;color:var(--dt-muted);}
+.dt-delivery-heading h1{font-size:23px;line-height:1.45;letter-spacing:-.6px;font-weight:600;margin:10px 0;overflow-wrap:anywhere;}
+.dt-delivery-heading>p{font-size:11px;line-height:1.8;color:var(--dt-secondary);}
+.dt-briefing{padding:17px 18px 14px;border:1px solid var(--dt-line);border-radius:14px;background:var(--dt-surface,var(--dt-bg));box-shadow:0 3px 16px #182b4203;margin:15px 0 22px;animation:dt-delivery-enter .22s ease-out;}
+.dt-briefing-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.dt-briefing-label{display:flex;align-items:center;gap:7px;color:var(--dt-secondary);font-size:10px;}
+.dt-briefing-play{display:inline-flex;align-items:center;justify-content:center;color:var(--dt-muted);padding:4px;border-radius:6px;}.dt-briefing-play:hover{background:var(--dt-hover);color:var(--dt-ink);}
+.dt-briefing>p{font-size:13px;line-height:1.95;margin:13px 0 8px;color:var(--dt-ink);}
+.dt-briefing-speaking{border-color:#8194ae66;box-shadow:0 3px 18px #8396b00b;}
+.dt-briefing-speaking .dt-briefing-label{color:#748ca8;}
+.dt-briefing-source{display:flex;gap:7px;color:var(--dt-muted);font-size:10px;line-height:1.7;margin-top:12px;padding-top:10px;border-top:1px solid var(--dt-line);}
+.dt-briefing-source>span:last-child{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.dt-delivery-conversation{margin-top:22px;}.dt-delivery-conversation>button{display:flex;align-items:center;justify-content:space-between;width:100%;color:var(--dt-secondary);font-size:11px;padding:11px 0;border-top:1px solid var(--dt-line);}
+.dt-delivery-conversation .dt-message{font-size:12px;}.dt-delivery-conversation>div{padding-top:10px;}
+.dt-delivery-invitation{font-size:12px;color:var(--dt-secondary);line-height:1.9;margin:25px 0;}.dt-delivery-prompts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}.dt-delivery-prompts button{font-size:11px;padding:7px 10px;border:1px solid var(--dt-line);border-radius:8px;}
+.dt-delivery-prompts button:hover{background:var(--dt-hover);}
+.dt-delivery-working{display:flex;gap:9px;align-items:center;color:var(--dt-secondary);font-size:11px;padding:15px 0;}
+.dt-quick .dt-briefing{margin:5px 15px 12px;padding:12px 14px;}.dt-quick .dt-briefing>p{font-size:12px;line-height:1.8;}
+.dt-quick-context{padding:12px 20px 17px;}.dt-quick-context strong{font-size:17px;letter-spacing:-.4px;font-weight:500;}.dt-quick-context p{margin-top:6px;color:var(--dt-muted);font-size:11px;line-height:1.8;}
+.dt-quick-last-user{font-size:11px;line-height:1.7;color:var(--dt-secondary);padding:0 20px 8px;max-height:65px;overflow:auto;}
+.dt-quick-last-answer{padding:0 20px 12px;max-height:180px;overflow:auto;font-size:12px;line-height:1.8;color:var(--dt-ink);}
+.dt-quick-last-answer .dt-message{margin:0;}
+.dt-voice-send-stop{display:inline-flex;align-items:center;justify-content:center;width:25px;height:27px;color:var(--dt-muted);}
+@keyframes dt-delivery-enter{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){.dt-shell.dt-has-pane .dt-main{min-width:285px;flex-basis:37%;}.dt-has-pane .dt-main .dt-content{padding-left:18px;padding-right:18px;}.dt-has-pane .dt-compose-inner{padding-left:12px;padding-right:12px;}.dt-delivery-heading h1{font-size:20px;}.dt-briefing{padding:12px;}.dt-briefing>p{font-size:12px;}.dt-has-pane .dt-composer-hint{display:none;}}
+@media(max-width:650px){.dt-shell.dt-has-pane .dt-body{position:relative;flex-direction:column;}.dt-shell.dt-has-pane .dt-main{flex:0 0 auto;min-width:0;max-height:45%;}.dt-has-pane .dt-main .dt-scroll{display:none;}.dt-has-pane .dt-reference-pane{min-height:0;width:100%;border-left:0;border-top:1px solid var(--dt-line);}.dt-has-pane .dt-compose-dock{padding-top:9px;}.dt-has-pane .dt-composer{margin-bottom:8px;}}
+@media(prefers-reduced-motion:reduce){.dt-briefing{animation:none;}}

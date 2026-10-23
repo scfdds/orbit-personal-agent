@@ -1,0 +1,43 @@
+/* One assistant entrance, independent discussions. References show the relationship. */
+.dt-handoff-introduction { margin:0 0 10px; font-size:13px; line-height:1.85; color:var(--dt-ink); }
+.dt-transcript-main .dt-conversation-reference { margin-left:34px; margin-bottom:14px; }
+.dt-handoff-link { display:inline-flex; align-items:center; gap:9px; max-width:100%; padding:9px 12px; border:1px solid var(--dt-line); border-radius:11px; color:var(--dt-secondary); background:var(--dt-surface); text-align:left; transition:background .15s,border-color .15s; }
+.dt-handoff-link>span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:12px; font-weight:500; }
+.dt-handoff-link>svg { flex:none; color:var(--dt-muted); }
+.dt-handoff-link:hover { background:var(--dt-hover); border-color:color-mix(in srgb,var(--dt-line),var(--dt-muted) 25%); }
+.dt-handoff-link:focus-visible,.dt-handoff-origin summary:focus-visible,.dt-handoff-origin-body>button:focus-visible { outline:2px solid #8dabc7; outline-offset:3px; }
+.dt-transcript-matter .dt-message-assistant { display:block; padding-left:0; }
+.dt-transcript-matter .dt-message-assistant .dt-message-content { width:100%; max-width:100%; }
+.dt-transcript-matter .dt-message-actions { justify-content:flex-start; }
+.dt-handoff-origin { margin:4px 0 25px; border-left:2px solid color-mix(in srgb,var(--dt-muted) 30%,transparent); padding:0 0 0 13px; color:var(--dt-secondary); }
+.dt-handoff-origin summary { display:grid; grid-template-columns:14px minmax(0,1fr) 14px; align-items:center; column-gap:6px; row-gap:6px; cursor:pointer; list-style:none; font-size:10px; color:var(--dt-muted); }
+.dt-handoff-origin summary::-webkit-details-marker { display:none; }
+.dt-handoff-origin summary>small { grid-column:1/-1; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:12px; line-height:1.7; color:var(--dt-secondary); }
+.dt-handoff-origin details[open] summary>small { display:none; }
+.dt-handoff-origin details[open] summary>svg:last-of-type { transform:rotate(180deg); }
+.dt-handoff-origin-body { padding-top:9px; }
+.dt-handoff-origin-body>.dt-prose { font-size:12px; line-height:1.85; }
+.dt-handoff-origin-body>button { display:inline-flex; align-items:center; gap:5px; padding:6px 0 0; font-size:10px; color:var(--dt-muted); }
+.dt-handoff-origin-body>button:hover { color:var(--dt-ink); }
+.dt-source-focus { border-radius:12px; outline:2px solid #91a9b466; outline-offset:7px; background:color-mix(in srgb,var(--dt-surface),#91a9b4 8%); }
+.dt-persistent-shell.dt-has-matter .dt-handoff-introduction { font-size:12px; }
+@media(prefers-reduced-motion:reduce) { .dt-handoff-link { transition:none; } }
+
+/* Attribution follows the answer; opening its source is always a deliberate action. */
+.dt-assignment-tag { display:inline-flex; align-items:center; gap:6px; max-width:100%; margin:14px 0 2px; padding:5px 8px; border-radius:7px; color:var(--dt-secondary); background:color-mix(in srgb,var(--dt-hover) 65%,transparent); font-size:10px; line-height:1.5; text-align:left; transition:background .15s,color .15s; }
+.dt-assignment-tag>svg { flex:none; color:var(--dt-muted); }
+.dt-assignment-label { color:var(--dt-muted); white-space:nowrap; }
+.dt-assignment-title { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dt-assignment-tag:hover { background:var(--dt-hover); color:var(--dt-ink); }
+.dt-assignment-tag:focus-visible { outline:2px solid #8dabc7; outline-offset:3px; }
+.dt-transcript-main .dt-run-details { margin-bottom:24px; }
+@media(prefers-reduced-motion:reduce) { .dt-assignment-tag { transition:none; } }
+
+/* A saved file is a reference in the conversation, never an implicit navigation. */
+.dt-answer-artifacts { display:flex; flex-wrap:wrap; gap:7px; margin:15px 0 4px; }
+.dt-answer-artifact { display:inline-flex; align-items:center; gap:9px; max-width:100%; padding:10px 12px; border:1px solid var(--dt-line); border-radius:10px; background:var(--dt-surface); color:var(--dt-secondary); font-size:12px; text-align:left; }
+.dt-answer-artifact>svg { flex:none; color:var(--dt-muted); }
+.dt-answer-artifact>span { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dt-answer-artifact:hover { color:var(--dt-ink); background:var(--dt-hover); }
+.dt-answer-artifact:focus-visible { outline:2px solid #8dabc7; outline-offset:3px; }
+.dt-message-attachments { margin-left:42px; margin-bottom:20px; }

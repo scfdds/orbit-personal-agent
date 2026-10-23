@@ -1,0 +1,11 @@
+{
+  "servers": [
+    {
+      "id": "text-utils",
+      "name": "文字统计示例",
+      "command": "node",
+      "args": ["scripts/fixtures/mcp-test-server.mjs"],
+      "readOnlyTools": ["text_length"]
+    }
+  ]
+}

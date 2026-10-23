@@ -1,0 +1,15 @@
+/* A single matter card: name, progress, open. Context organization stays behind the UI. */
+.dt-root .dt-organization-card { display:flex; align-items:center; justify-content:flex-start; gap:12px; text-align:left; width:460px; max-width:100%; padding:14px 16px; margin:22px 0 8px; border:1px solid var(--dt-line,#e4e8e5); border-radius:13px; background:var(--dt-surface,#fff); color:inherit; cursor:pointer; font:inherit; transition:background .16s,border-color .16s; }
+.dt-root .dt-organization-card:hover { background:var(--dt-hover,#f5f7f6); border-color:#b9c9bf; }
+.dt-organization-icon { display:flex; align-items:center; justify-content:center; flex:none; width:34px; height:38px; border-radius:9px; color:#718b7d; background:#edf2ee; }
+.dt-organization-content { display:flex; flex:1; min-width:0; flex-direction:column; gap:5px; }
+.dt-organization-title { font-size:13px; line-height:1.5; font-weight:550; }
+.dt-organization-progress { color:var(--dt-secondary,#808983); font-size:11px; line-height:1.65; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.dt-organization-arrow { flex:none; color:var(--dt-muted,#8c9990); }
+.dt-context-details { margin:24px 0; padding-top:16px; border-top:1px solid var(--dt-line); color:var(--dt-muted); font-size:11px; }
+.dt-context-details summary { cursor:pointer; width:100%; }.dt-context-details summary span { float:right; font-size:10px; }
+.dt-context-list { display:grid; gap:5px; margin-top:10px; }
+.dt-root .dt-context-reference { display:flex; align-items:center; justify-content:flex-start; text-align:left; width:100%; padding:8px 3px; gap:8px; font-size:11px; color:var(--dt-secondary); }
+.dt-context-reference span { flex:1; }.dt-context-reference svg { flex:none; }
+.dt-organization-card:focus-visible,.dt-context-reference:focus-visible,.dt-context-details summary:focus-visible { outline:2px solid #8caa9b; outline-offset:3px; }
+@media(prefers-color-scheme:dark) { .dt-organization-icon { background:#344039; color:#a6beb0; } }

@@ -1,0 +1,19 @@
+* text=auto
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.swift text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.mp4 binary
+*.icns binary
+
+# Preserve upstream license text verbatim.
+licenses/** -text -whitespace

@@ -1,0 +1,46 @@
+# Dependencies and generated builds
+node_modules/
+/dist/
+/.desktop-build/
+/desktop-dist/
+/coverage/
+*.tsbuildinfo
+
+# Local credentials and private configuration
+.env
+.env.*
+!.env.example
+mcp.local.json
+model-config.json
+voice-config.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Personal runtime state: conversations, notifications, memories and exports
+/.agent-data/
+/data/
+/memory/
+/exports/
+/outputs/
+/work/
+/research/
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.log
+logs/
+
+# Local editor and OS metadata
+.DS_Store
+._*
+__MACOSX/
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db

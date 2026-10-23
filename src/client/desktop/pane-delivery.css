@@ -1,0 +1,9 @@
+.dt-pane-reader .dt-delivery-focus {
+  border-radius: 8px;
+  background: color-mix(in srgb, #4d78bd 9%, transparent);
+  outline: 6px solid color-mix(in srgb, #4d78bd 9%, transparent);
+  transition: background-color 240ms ease, outline-color 240ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .dt-pane-reader .dt-delivery-focus { transition: none; }
+}

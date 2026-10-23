@@ -1,0 +1,23 @@
+.dt-wechat-settings .dt-beta-heading { color:var(--dt-secondary); }
+.dt-wechat-settings .dt-beta-heading>span { border-color:var(--dt-line); }
+.dt-dialog .dt-wechat-settings .dt-switch { border:0; background:var(--dt-line); }
+.dt-dialog .dt-wechat-settings .dt-switch[aria-checked=true] { background:var(--dt-ink); }
+.dt-dialog .dt-wechat-settings .dt-switch[aria-checked=mixed] { background:var(--dt-muted); }
+.dt-wechat-settings .dt-switch[aria-checked=mixed]>span { transform:translateX(6px); }
+.dt-wechat-settings .dt-switch:focus-visible { outline:2px solid var(--dt-muted); outline-offset:3px; }
+.dt-wechat-analysis { padding:15px 0 18px; border-bottom:1px solid var(--dt-line); }
+.dt-wechat-analysis h2 { margin:0 0 15px; font-size:13px; font-weight:600; color:var(--dt-ink); }
+.dt-wechat-analysis-toggle { display:flex; align-items:center; gap:18px; }
+.dt-wechat-analysis-toggle>div { flex:1; }
+.dt-wechat-analysis-toggle strong { font-size:12px; font-weight:550; }
+.dt-wechat-analysis-toggle small { display:block; margin-top:5px; color:var(--dt-muted); font-size:10px; }
+.dt-wechat-analysis>p { color:var(--dt-muted); font-size:10px; line-height:1.8; margin:9px 0 0!important; }
+.dt-wechat-analysis-contacts { margin-top:15px; color:var(--dt-secondary); font-size:11px; }
+.dt-wechat-analysis-contacts>summary { display:flex; align-items:center; justify-content:space-between; cursor:pointer; list-style:none; }
+.dt-wechat-analysis-contacts>summary::-webkit-details-marker { display:none; }
+.dt-wechat-analysis-contacts[open]>summary>svg { transform:rotate(90deg); }
+.dt-wechat-analysis-contacts>div { max-height:220px; overflow:auto; margin-top:8px; }
+.dt-wechat-analysis-contact { display:flex; align-items:center; gap:15px; padding:10px 0; border-top:1px solid var(--dt-line); }
+.dt-wechat-analysis-contact>span { flex:1; min-width:0; }
+.dt-wechat-analysis-contact strong { display:block; font-size:11px; font-weight:500; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dt-wechat-analysis-contact small { display:block; margin-top:4px; color:var(--dt-muted); font-size:10px; }

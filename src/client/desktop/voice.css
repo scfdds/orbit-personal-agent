@@ -1,0 +1,20 @@
+.dt-composer-controls,.dt-voice-controls,.dt-message-actions{display:flex;align-items:center;gap:5px;}
+.dt-voice-controls{gap:2px;margin-right:5px;}
+.dt-root .dt-voice-button{display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;color:var(--dt-muted);border-radius:8px;}
+.dt-root .dt-voice-button:hover{background:var(--dt-hover);color:var(--dt-ink);}
+.dt-root .dt-voice-enabled{color:#73859f;background:#8295b012;}
+.dt-root .dt-voice-recording{color:#bd6b61;background:#bd6b6115;}
+.dt-voice-status{display:flex;align-items:center;gap:7px;min-height:24px;margin-top:7px;padding:3px 1px;color:var(--dt-secondary);font-size:10px;line-height:1.6;}
+.dt-voice-status>span:not(.dt-voice-dot){flex:1;}.dt-voice-status>button{font-size:10px;white-space:nowrap;color:var(--dt-muted);padding:2px 4px;}
+.dt-voice-status.dt-voice-error{color:#ac715d;}.dt-voice-dot{height:6px;width:6px;border-radius:50%;background:#bd6b61;flex:none;box-shadow:0 0 0 3px #bd6b6115;}
+.dt-root .dt-message-read{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;color:var(--dt-muted);border-radius:7px;margin-top:6px;opacity:0;transition:opacity 140ms,background 140ms;}
+.dt-message:hover .dt-message-read,.dt-message:focus-within .dt-message-read,.dt-root .dt-message-read[aria-pressed=true]{opacity:1;}
+.dt-root .dt-message-read:hover,.dt-root .dt-message-read:focus-visible{color:var(--dt-ink);background:var(--dt-hover);}
+@media(hover:none){.dt-root .dt-message-read{opacity:.65;}}
+@media(prefers-reduced-motion:reduce){.dt-root .dt-message-read{transition:none;}}
+
+.dt-quick .dt-voice-status{font-size:10px;}.dt-quick .dt-voice-controls{gap:0;}
+@media(max-width:760px){.dt-composer-context{max-width:55%;}.dt-composer-context>span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}}
+
+.dt-voice-status>span:not(.dt-voice-dot){min-width:0;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;word-break:break-word;}
+.dt-voice-status>button{flex-shrink:0;}

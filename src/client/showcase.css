@@ -1,0 +1,21 @@
+.showcase-note {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  flex-shrink: 0;
+  padding: 9px 24px;
+  border-bottom: 1px solid var(--border, #ececef);
+  background: var(--surface, #fafafa);
+  color: var(--muted, #7b818a);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.showcase-note > span:first-child {
+  color: var(--text, #373a3e);
+  font-weight: 500;
+}
+.showcase-note small {
+  margin-left: auto;
+  font-size: inherit;
+}

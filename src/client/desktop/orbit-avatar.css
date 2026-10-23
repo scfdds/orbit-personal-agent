@@ -1,0 +1,15 @@
+.dt-orbit-avatar { width:var(--avatar-size,36px); height:var(--avatar-size,36px); display:inline-flex; align-items:center; justify-content:center; flex:none; position:relative; vertical-align:middle; }
+.dt-orbit-avatar>img { display:block; width:100%; height:100%; object-fit:contain; user-select:none; pointer-events:none; filter:drop-shadow(0 2px 2px #2b3b5211); }
+.dt-avatar.dt-avatar-cloud { border:0; width:31px; height:31px; margin-top:-2px; border-radius:0; }
+.dt-avatar-cloud .dt-orbit-avatar { width:35px; height:35px; }
+.dt-presence.dt-presence-cloud .dt-presence-aura { inset:18%; filter:blur(18px); opacity:calc(.25 + var(--voice-level)*.5); }
+.dt-presence-cloud>.dt-orbit-avatar { --avatar-size:76%!important; position:absolute; inset:12%; width:76%; height:76%; transform:translateY(calc(var(--voice-level)*-3px)) scale(calc(1 + var(--voice-level)*.035)); transition:transform .13s ease-out; }
+.dt-presence-cloud>.dt-orbit-avatar>img { filter:drop-shadow(0 8px 8px #2b3b5214); }
+.dt-presence-cloud.dt-presence-small>.dt-orbit-avatar { inset:0; width:100%; height:100%; }
+.dt-presence-cloud.dt-presence-small .dt-presence-aura { display:none; }
+.dt-presence-cloud.dt-presence-small>.dt-orbit-avatar>img { filter:drop-shadow(0 1px 1px #2b3b520f); }
+.dt-presence-cloud.dt-presence-muted,.dt-presence-cloud.dt-presence-error { opacity:.75; }
+.dt-assistant-overlay>header .dt-orbit-avatar { margin:-6px -2px -6px -4px; }
+.dt-quick-header .dt-orbit-avatar { margin:-4px -3px; }
+@media(prefers-color-scheme:dark) { .dt-orbit-avatar>img { filter:drop-shadow(0 2px 5px #0002); } }
+@media(prefers-reduced-motion:reduce) { .dt-presence-cloud>.dt-orbit-avatar { transform:none; transition:none; } }
