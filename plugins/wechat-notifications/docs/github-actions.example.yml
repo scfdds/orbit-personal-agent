@@ -1,0 +1,47 @@
+name: WeChat notification plugin
+
+on:
+  push:
+    paths:
+      - 'plugins/wechat-notifications/**'
+      - '.agents/plugins/marketplace.json'
+      - '.github/workflows/notification-plugin.yml'
+  pull_request:
+    paths:
+      - 'plugins/wechat-notifications/**'
+      - '.agents/plugins/marketplace.json'
+      - '.github/workflows/notification-plugin.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  plugin:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: plugins/wechat-notifications
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: plugins/wechat-notifications/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Build macOS notification reader
+        if: runner.os == 'macOS'
+        run: npm run build:native
+      - name: Test native reader with synthetic database
+        if: runner.os == 'macOS'
+        run: npm run test:native
+      - name: Package local plugin
+        if: runner.os == 'macOS'
+        run: npm run pack:plugin

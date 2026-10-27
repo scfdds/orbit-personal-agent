@@ -1,0 +1,9 @@
+node_modules/
+dist/
+native/bin/
+artifacts/
+.env*
+*.sqlite*
+*.db*
+*.log
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "name": "wechat-notifications",
+  "version": "0.1.0",
+  "description": "Read and search locally authorized WeChat notification snippets on macOS.",
+  "author": { "name": "Orbit contributors" },
+  "skills": "./skills/",
+  "mcpServers": "./mcp.json",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "微信通知",
+    "shortDescription": "查询本机已允许读取的微信通知片段",
+    "developerName": "Orbit contributors",
+    "category": "Productivity"
+  }
+}

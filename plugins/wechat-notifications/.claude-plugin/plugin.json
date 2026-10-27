@@ -1,0 +1,8 @@
+{
+  "name": "wechat-notifications",
+  "version": "0.1.0",
+  "description": "Read and search locally authorized WeChat notification snippets on macOS.",
+  "author": { "name": "Orbit contributors" },
+  "homepage": "https://github.com/scfdds/orbit-personal-agent/tree/main/plugins/wechat-notifications",
+  "repository": "https://github.com/scfdds/orbit-personal-agent"
+}

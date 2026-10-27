@@ -1,0 +1,22 @@
+{
+  "name": "orbit-wechat-notifications",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Read locally authorized macOS WeChat notification fragments through MCP.",
+  "engines": { "node": ">=24.0.0" },
+  "scripts": {
+    "start": "node src/cli.mjs serve",
+    "demo": "node src/cli.mjs demo",
+    "build": "node scripts/build.mjs",
+    "build:native": "node scripts/build-native.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:native": "native/bin/wechat-notification-db-reader --self-test",
+    "pack:plugin": "node scripts/pack.mjs && node scripts/verify-package.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": { "esbuild": "0.28.2" }
+}
